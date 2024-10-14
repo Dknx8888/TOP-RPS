@@ -26,7 +26,9 @@ function playRound(humanChoice, computerChoice) {
     if (humanChoice == computerChoice) {
         console.log("It's a tie!");
         tie = true;
-    } else if (humanChoice == "rock" && computerChoice == "scissors" || humanChoice == "scissors" && computerChoice == "paper" || humanChoice == "paper" && computerChoice == "rock") {
+    } else if (humanChoice == "rock" && computerChoice == "scissors" ||
+        humanChoice == "scissors" && computerChoice == "paper" ||
+        humanChoice == "paper" && computerChoice == "rock") {
         console.log("You win!");
         humanWon = true;
     } else {
@@ -39,7 +41,7 @@ function playRound(humanChoice, computerChoice) {
 function playGame() {
     let humanScore = 0;
     let computerScore = 0;
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 5; i++) {
         let {tie, humanWon} = playRound(getHumanChoice(), getComputerChoice());
         if (humanWon) {
             humanScore++;
